@@ -1,0 +1,34 @@
+@import '../../assets/styles/_index';
+
+.alert-panel {
+  position: fixed;
+  top: -5em;
+  right: $padding-large;
+  padding: $padding-standard;
+  border: 2px solid transparentize($color-first, .3);
+  border-radius: $border-radius-common; 
+  background-color: transparentize($color-yellow, .8);
+  font-size: $font-size-small;
+  transition: top #{$transition-time-long};
+
+  & .icon {
+    display: inline-block;
+    margin-right: $padding-small;
+    vertical-align: middle;
+    color: $color-first;
+  }
+
+  &.show {
+    top: $padding-large;
+  }
+
+  &.alert-danger {
+    background-color: transparentize($color-red, .2);
+    border: 2px solid transparentize($color-dark, .8);
+    color: $color-white;
+    
+    & .icon {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/****************************/
+/* Media layout             */
+/****************************/
+/****************************/
+/* Site preset              */
+/****************************/
+/****************************/
+/* Element preset           */
+/****************************/
+h1, h2, h3, h4 {
+  color: #613e83; }
+
+h1 {
+  text-transform: uppercase; }
+
+.full-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: #EEEEE7; }
+
+/* Form elements */
+.btn {
+  display: inline-block;
+  height: 40px;
+  padding: 0 1em;
+  margin: 0 5px;
+  line-height: 40px;
+  border: 0;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 0.9em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  cursor: pointer; }
+  .btn.btn-primary {
+    background-color: #0c0; }
+    .btn.btn-primary.ghost {
+      border: #0c0 2px solid;
+      line-height: calc(40px - 4px);
+      color: #0c0;
+      background-color: transparent; }
+      .btn.btn-primary.ghost:hover {
+        background-color: rgba(255, 255, 255, 0.2); }
+
+input {
+  display: inline-block;
+  padding: 0 1em;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  box-sizing: border-box;
+  line-height: 40px; }
+
+.input-row {
+  display: block;
+  margin-bottom: 10px; }
+  .input-row > label {
+    display: inline-block;
+    min-width: 100px;
+    text-align: left;
+    line-height: 40px; }
+  .input-row > .error-message {
+    padding: 0 5px;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 0.8em;
+    color: #c00;
+    clear: both; }
+  .input-row.has-error > input {
+    border: 1px solid #c00; }
+  .input-row.single-line:after {
+    display: table;
+    clear: both;
+    content: ''; }
+  .input-row.single-line > label {
+    float: left; }
+  .input-row.single-line > input {
+    float: right;
+    width: calc(100% - 100px); }
+  .input-row.has-icon > label {
+    min-width: 130px; }
+    .input-row.has-icon > label .icon {
+      width: 30px;
+      color: #4A7B6F; }
+    .input-row.has-icon > label .material-icons {
+      margin-top: -4px; }
+    .input-row.has-icon > label .icon,
+    .input-row.has-icon > label .material-icons,
+    .input-row.has-icon > label .text {
+      display: inline-block;
+      vertical-align: middle; }
+  .input-row.has-icon > input {
+    width: calc(100% - 130px); }
+
+.page-container .page-content {
+  padding: 1em; }

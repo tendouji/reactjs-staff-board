@@ -1,0 +1,136 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+h1, h2, h3, h4 {
+  color: $color-blue; 
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.full-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: $color-light;
+}
+
+
+/* Form elements */
+.btn {
+  display: inline-block;
+  height: $button-height-standard;
+  padding: 0 $padding-large;
+  margin: 0 $padding-small;
+  line-height: $button-height-standard;
+  border: 0;
+  color: $color-white;
+  font-family: #{$default-font-family};
+  font-size: $font-size-small;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: $button-border-radius;
+  box-sizing: border-box;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: $color-green;
+    
+    &.ghost {
+      border: #{$color-green} #{$button-border-width} solid;
+      line-height: calc(#{$button-height-standard} - #{$button-border-width * 2});
+      color: $color-green;
+      background-color: transparent;
+
+      &:hover {
+        background-color: #{$transparent-white};
+      }
+    }
+  }
+} 
+
+input {
+  display: inline-block;
+  padding: 0 $padding-large;
+  border: 1px solid #{$transparent-dark-light}; 
+  border-radius: $button-border-radius;
+  // background-color: $transparent-super-white;
+  box-sizing: border-box; 
+  line-height: $button-height-standard;
+}
+
+.input-row {
+  display: block;
+  margin-bottom: $padding-standard;
+
+  & > label {
+    display: inline-block;
+    min-width: 100px;
+    text-align: left;
+    line-height: $button-height-standard; 
+  }
+
+  & > .error-message {
+    padding: 0 $padding-small;
+    box-sizing: border-box; 
+    text-align: right;
+    font-size: $font-size-xsmall; 
+    color: $color-red; 
+    clear: both;
+  }
+
+  &.has-error { 
+    & > input {
+      border: 1px solid #{$color-red}; 
+    }
+  }
+
+  &.single-line {
+    &:after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+
+    & > label {
+      float: left;
+    }    
+    
+    & > input {
+      float: right;
+      width: calc(100% - 100px);
+    }
+  }
+
+  &.has-icon {
+    & > label {
+      min-width: 130px;
+
+      & .icon {
+        width: 30px;
+        color: $color-first;
+      }
+
+      & .material-icons {
+        margin-top: -4px;
+      }
+
+      & .icon, 
+      & .material-icons, 
+      & .text {
+        display: inline-block;
+        vertical-align: middle;
+      } 
+    }    
+    
+    & > input {
+      width: calc(100% - 130px);
+    }
+  }
+
+}

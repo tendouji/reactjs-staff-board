@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+
+.overlay {
+  display: flex;
+  position: fixed;
+  @include fit-full-screen;
+  background-color: $color-light-rgb;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+
+  & .icon-holder {
+    // anything
+  }
+}
